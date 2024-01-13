@@ -36,7 +36,9 @@ function generateFUID() {
   let y = Math.random();
   let z = Math.random();
 
-  return "xxxxxxxx:xxxx:4xxx:yxxx:xxxxxxxxxxxx".replace(/[xy:]/g, function(char) {
+  let version = 1
+
+  return `xxxxxxxx:xxxx:F${version}xx:yxxx:xxxxxxxxxxxx`.replace(/[xy:]/g, function(char) {
     const chaoticVals = generateChaoticValues(x, y, z, [2.6, 1.5, 1.2]);
     x = chaoticVals.x;
     y = chaoticVals.y;

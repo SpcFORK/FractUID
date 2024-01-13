@@ -67,6 +67,3 @@ const eobj = {
     ? Object.assign(window, eobj)
     : module.exports = eobj
 );
-
-// Example
-console.log(eobj.generateFUID());
